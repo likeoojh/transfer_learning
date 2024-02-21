@@ -17,7 +17,7 @@ def get_model(config):
     if config.model_name == "resnet":
         """ Resnet34
         """
-        model = models.resnet34(pretrained=config.use_pretrained)
+        model = models.resnet34()
         set_parameter_requires_grad(model, config.freeze)
 
         n_features = model.fc.in_features
